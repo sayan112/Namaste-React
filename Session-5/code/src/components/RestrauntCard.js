@@ -4,10 +4,10 @@ const RestrauntCard = ({
   name,
   cloudinaryImageId,
   area,
-  cuisines,
-  lastMileTravelString,
-  costForTwoString,
+  lastMileTravel,
+  costForTwo,
   avgRating,
+  cuisines,
 }) => {
   return (
     <div className="card-details">
@@ -18,7 +18,7 @@ const RestrauntCard = ({
             <strong>{name}</strong>
           </p>
         </div>
-        <small>{cuisines.join(", ")}</small> <br /> <br />
+        <small>{cuisines?.join(",")}</small> <br /> <br />
         <p
           style={{
             margin: "0",
@@ -29,8 +29,7 @@ const RestrauntCard = ({
           <small style={avgRating > 3 ? { color: "green" } : { color: "red" }}>
             {avgRating}
           </small>
-          <small>{lastMileTravelString}</small>{" "}
-          <small>{costForTwoString}</small>
+          <small>{lastMileTravel}</small> <small>{costForTwo}</small>
         </p>
       </div>
     </div>
